@@ -25,7 +25,7 @@ This project demonstrates the deployment and administration of a Windows Server 
 
 ## Lab Architecture
 
-*(Architecture diagram will be added here.)*
+<img width="1891" height="1891" alt="Lab 1 diagram" src="https://github.com/user-attachments/assets/9574d70d-2413-48aa-97f5-c2ceba78db39" />
 
 ---
 
