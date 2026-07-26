@@ -34,7 +34,7 @@ This project demonstrates the deployment and administration of a Windows Server 
 ### Step 1 – Configure Active Directory
 I began by provisioning a Windows Server 2022 virtual machine in a virtualized environment. After completing the initial operating system configuration, I assigned the server a static IP address to ensure reliable communication for Active Directory and DNS services.
 
-Next, I installed the Active Directory Domain Services (AD DS) role through Server Manager using the Add Roles and Features Wizard. During installation, the required management tools were also installed automatically.
+Next, I installed the Active Directory Domain Services (AD DS) role through Server Manager using the Add Roles and Features. During installation, the required management tools were also installed automatically.
 
 Once AD DS was installed, I promoted the server to a Domain Controller by selecting "Promote this server to a domain controller." I created a new Active Directory forest using the domain name lab.local
 
@@ -42,13 +42,13 @@ Once AD DS was installed, I promoted the server to a Domain Controller by select
 
 After successfully promoting the Windows Server to a Domain Controller and creating the lab.local domain, I launched Active Directory Users and Computers (ADUC) to begin organizing the directory.
 
-Within the lab.local domain, I created four Organizational Units to represent different departments within a simulated business environment. these four orgainizations are IT, Human Resurces,Finance,sales. Having this structure orgainizes the evironemnt similar to how an orgainization seperates departments making it easier to manage.
+Within the lab.local domain, I created four Organizational Units to represent different departments within a simulated business environment. These four orgainizations are IT, Human Resurces,Finance,sales. Having this structure orgainizes the evironemnt similar to how an orgainization seperates departments making it easier to manage.
 ### Step 3 – Create User Accounts
 
 After creating the Organizational Units, I used Active Directory Users and Computers (ADUC) to create individual user accounts for each department. Each user account was placed into its corresponding Organizational Unit to maintain a logical directory structure and accurately reflect a real-world organizational hierarchy.
 ### Step 4 – Create Security Groups
 
-After creating the user accounts, I used Active Directory Users and Computers (ADUC) to create security groups for each department within the domain. These groups were designed to represent common organizational roles and provide a centralized method for managing user permissions. The security groups created in this lab included IT_Admins, HR_Users, Finance_Users, and Sales_Users, with each group corresponding to its respective department. After creating the groups, I assigned the appropriate users to each one, demonstrating how Active Directory uses group-based management effectively.
+After creating the user accounts, I used Active Directory Users and Computers (ADUC) to create security groups for each department within the domain. These groups were designed to represent common organizational roles and provide a centralized method for managing user permissions. The security groups created in this lab included IT_Admins, HR_Users, Finance_Users, and Sales_Users with each group corresponding to its respective department. After creating the groups, I assigned the appropriate users to each one, demonstrating how Active Directory uses group-based management effectively.
 ### Step 5 – Configure Group Policy
 
 After creating the Organizational Units, user accounts, and security groups, I opened the Group Policy Management Console (GPMC) to create and configure a new Group Policy Object for the domain. The policy was linked to the appropriate Active Directory container so that the configured settings would automatically apply to users within the domain.
@@ -78,7 +78,7 @@ Get-ADOrganizationalUnit -Filter *
 
 ### Step 8 – Demonstrate User Administration
 
-After verifying that the Active Directory environment was configured correctly, I demonstrated several user administration tasks using Active Directory Users and Computers (ADUC). These tasks simulated common responsibilities performed by IT administrators when managing employee accounts throughout their lifecycle.
+After verifying that the Active Directory environment was configured correctly, I demonstrated several user administration tasks using Active Directory Users and Computers. These tasks simulated common responsibilities performed by IT administrators when managing employee accounts throughout their lifecycle.
 
 For this demonstration, I selected an existing user account and performed administrative actions such as disabling and re-enabling the account. Disabling a user account prevents the user from authenticating to the domain while preserving their account information, group memberships, and permissions. Re-enabling the account restores access without requiring the account to be recreated.
 
